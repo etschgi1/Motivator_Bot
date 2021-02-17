@@ -25,17 +25,12 @@ movie_stuff = "http://www.omdbapi.com/?i=tt3896198&apikey=5c9a5372"
 #---------------------------------------------------------------
 Forecast = "https://community-open-weather-map.p.rapidapi.com/forecast"
 Forecast_query = {"q": "Graz,at"}
-Forecast_headers = {
-    'x-rapidapi-key': "c7503a43f4msh8782077191ee4d8p10a4a5jsnea9a70866ccd",
-    'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com"
-}
+Forecast_headers = os.getenv('Forecast_headers')
 
 Weather = "https://community-open-weather-map.p.rapidapi.com/weather"
 Weather_query = {"q": "Graz,at", "lang": "-de", "units": "metric"}
-Weather_headers = {
-    'x-rapidapi-key': "c7503a43f4msh8782077191ee4d8p10a4a5jsnea9a70866ccd",
-    'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com"
-}
+Weather_headers = os.getenv('Weather_headers')
+
 
 
 def get_forecast():
